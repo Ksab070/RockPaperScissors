@@ -13,19 +13,14 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
     if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
         score--;
-        // console.log('You Lose! Paper beats Rock') 
     } else if (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
         score--;
-        // console.log('You Lose! Scissors beats Paper')
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
         score--;
-        // console.log('You Lose! Rock beats Scissors')
     } else if (playerSelection == computerSelection){
         score = score;
-        // console.log('TIE')
     } else {
         score++;
-        // console.log(`You win! ${playerSelection} beats ${computerSelection}`)
     }
 
   }

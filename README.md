@@ -1,2 +1,2 @@
 # RockPaperScissors
-Rock-Paper-Scissors
+Rock-Paper-Scissors project from the ODIN PROJECT!
