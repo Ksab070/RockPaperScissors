@@ -1,3 +1,5 @@
+let score = 0;
+
 function getComputerChoice () {
    let choice = Math.floor(Math.random()*3)+1
    if (choice === 1) {
@@ -9,34 +11,34 @@ function getComputerChoice () {
    }
 }
 
+const computerSelection = getComputerChoice(); 
+
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
     if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
         score--;
+        console.log('button clicked')
     } else if (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
         score--;
+        console.log('button clicked')
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
         score--;
+        console.log('button clicked')
     } else if (playerSelection == computerSelection){
         score = score;
+        console.log('button clicked')
     } else {
         score++;
+        console.log('button clicked')
     }
 
   }
 
-let score = 0;
-const computerSelection = getComputerChoice(); 
+let buttons = document.querySelectorAll('button');
 
-function game() {
-    for (let i = 0; i<5;i++) {
-        let playerSelection = prompt("Rock/Paper/Scissors?");
-        playRound(playerSelection,computerSelection);
-    }
-    if (score >= 2) {
-        console.log(`You Win!, your score is: ${score}`)
-    } else if (score < 2) {
-        console.log(`You Lose!, your score is: ${score}`)
-    }
+for (button of buttons) {
+    button.addEventListener('click', () => {
+        playRound(button.id,computerSelection)
+    })
 }
-game();
+
