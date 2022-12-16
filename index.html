@@ -7,18 +7,32 @@
     <title>Document</title>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <div id="scoreboard">
-        <h2>0</h2>
-    </div>
-    <div id="selection-buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
-    <div>
-        <h3>-</h3>
+    <div id="mainContainer">    
+        <h1 id="title">Rock! Paper! Scissors!</h1>
+        <div id="inner1">
+            <div id="scoreboard">
+                <div id="score">
+                    <h2 id="playerScore">0</h2>
+                    <h2> - </h2>
+                    <h2 id="compScore">0</h2>
+                </div>
+                <div id="rinfo">Round Info</div>
+            </div>
+        </div>
+        <div id="inner2">
+            <div id="selection-buttons">
+                <button id="rock" class="btns"><i class="fa-solid fa-hand-back-fist"></i>Rock</button>
+                <button id="paper" class="btns"><i class="fa-solid fa-hand"></i>Paper</button>
+                <button id="scissors" class="btns"><i class="fa-solid fa-hand-scissors"></i>Scissors</button>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="ginfo"><h3>Rock,Paper or Scissors?</h3></div>
+            <button id="reset"><i class="fa-sharp fa-solid fa-repeat"></i>Reset</button>
+        </div>
     </div>
 </body>
 </html>
